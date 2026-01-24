@@ -1,3 +1,3 @@
-﻿Public Class frmWindowsSearch
+﻿Public Class frmStartMenu
 
 End Class
