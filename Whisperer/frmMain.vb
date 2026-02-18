@@ -2,7 +2,9 @@
 Imports System.Windows
 Imports System.Windows.Forms.Design.AxImporter
 Imports libVM
+Imports libSW
 Imports libWindows
+Imports Utilities.libUtilities
 
 Public Class frmMain
    Public Sub ProcessOptions(frm As String)
@@ -22,6 +24,8 @@ Public Class frmMain
             frmChild = New frmTheme()
          Case "Microsoft Windows\Virtualization\Hyper-V"
             frmChild = New frmHyperV()
+         Case "Microsoft Edge"
+            frmChild = New frmMicrosoftEdge()
          Case Else
       End Select
       If frmChild IsNot Nothing Then

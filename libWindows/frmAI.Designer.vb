@@ -22,30 +22,34 @@ Partial Class frmAI
    'Do not modify it using the code editor.
    <System.Diagnostics.DebuggerStepThrough()> _
    Private Sub InitializeComponent()
-	  btnDisable = New Button()
+	  btnRun = New Button()
 	  tabCOntrolAI = New TabControl()
 	  TabPage1 = New TabPage()
+	  chkBoxShowCopilotButton = New CheckBox()
+	  chkBoxDisableSearchBoxSuggestions = New CheckBox()
 	  chkBoxNoUseStoreOpenWith = New CheckBox()
 	  chkBoxAllowSearchToUseLocation = New CheckBox()
 	  chkBoxCortanaConsent = New CheckBox()
 	  chkBoxBingSearchEnabled = New CheckBox()
 	  TabPage2 = New TabPage()
-	  chkCopilot = New CheckBox()
+	  chkBoxTurnOffWindowsCopilot = New CheckBox()
 	  TabPage3 = New TabPage()
+	  chkBoxDisableAIDataAnalysis = New CheckBox()
 	  tabCOntrolAI.SuspendLayout()
 	  TabPage1.SuspendLayout()
 	  TabPage2.SuspendLayout()
+	  TabPage3.SuspendLayout()
 	  SuspendLayout()
 	  ' 
-	  ' btnDisable
+	  ' btnRun
 	  ' 
-	  btnDisable.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
-	  btnDisable.Location = New Point(755, 435)
-	  btnDisable.Name = "btnDisable"
-	  btnDisable.Size = New Size(75, 23)
-	  btnDisable.TabIndex = 1
-	  btnDisable.Text = "Disable"
-	  btnDisable.UseVisualStyleBackColor = True
+	  btnRun.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+	  btnRun.Location = New Point(780, 435)
+	  btnRun.Name = "btnRun"
+	  btnRun.Size = New Size(50, 23)
+	  btnRun.TabIndex = 1
+	  btnRun.Text = "Run"
+	  btnRun.UseVisualStyleBackColor = True
 	  ' 
 	  ' tabCOntrolAI
 	  ' 
@@ -61,6 +65,8 @@ Partial Class frmAI
 	  ' 
 	  ' TabPage1
 	  ' 
+	  TabPage1.Controls.Add(chkBoxShowCopilotButton)
+	  TabPage1.Controls.Add(chkBoxDisableSearchBoxSuggestions)
 	  TabPage1.Controls.Add(chkBoxNoUseStoreOpenWith)
 	  TabPage1.Controls.Add(chkBoxAllowSearchToUseLocation)
 	  TabPage1.Controls.Add(chkBoxCortanaConsent)
@@ -72,6 +78,30 @@ Partial Class frmAI
 	  TabPage1.TabIndex = 0
 	  TabPage1.Text = "Search"
 	  TabPage1.UseVisualStyleBackColor = True
+	  ' 
+	  ' chkBoxShowCopilotButton
+	  ' 
+	  chkBoxShowCopilotButton.AutoSize = True
+	  chkBoxShowCopilotButton.Checked = True
+	  chkBoxShowCopilotButton.CheckState = CheckState.Checked
+	  chkBoxShowCopilotButton.Location = New Point(5, 105)
+	  chkBoxShowCopilotButton.Name = "chkBoxShowCopilotButton"
+	  chkBoxShowCopilotButton.Size = New Size(136, 19)
+	  chkBoxShowCopilotButton.TabIndex = 12
+	  chkBoxShowCopilotButton.Text = "Show Copilot Button"
+	  chkBoxShowCopilotButton.UseVisualStyleBackColor = True
+	  ' 
+	  ' chkBoxDisableSearchBoxSuggestions
+	  ' 
+	  chkBoxDisableSearchBoxSuggestions.AutoSize = True
+	  chkBoxDisableSearchBoxSuggestions.Checked = True
+	  chkBoxDisableSearchBoxSuggestions.CheckState = CheckState.Checked
+	  chkBoxDisableSearchBoxSuggestions.Location = New Point(5, 85)
+	  chkBoxDisableSearchBoxSuggestions.Name = "chkBoxDisableSearchBoxSuggestions"
+	  chkBoxDisableSearchBoxSuggestions.Size = New Size(191, 19)
+	  chkBoxDisableSearchBoxSuggestions.TabIndex = 11
+	  chkBoxDisableSearchBoxSuggestions.Text = "Disable Search Box Suggestions"
+	  chkBoxDisableSearchBoxSuggestions.UseVisualStyleBackColor = True
 	  ' 
 	  ' chkBoxNoUseStoreOpenWith
 	  ' 
@@ -123,7 +153,7 @@ Partial Class frmAI
 	  ' 
 	  ' TabPage2
 	  ' 
-	  TabPage2.Controls.Add(chkCopilot)
+	  TabPage2.Controls.Add(chkBoxTurnOffWindowsCopilot)
 	  TabPage2.Location = New Point(4, 24)
 	  TabPage2.Name = "TabPage2"
 	  TabPage2.Padding = New Padding(3)
@@ -132,18 +162,21 @@ Partial Class frmAI
 	  TabPage2.Text = "Copilot"
 	  TabPage2.UseVisualStyleBackColor = True
 	  ' 
-	  ' chkCopilot
+	  ' chkBoxTurnOffWindowsCopilot
 	  ' 
-	  chkCopilot.AutoSize = True
-	  chkCopilot.Location = New Point(381, 178)
-	  chkCopilot.Name = "chkCopilot"
-	  chkCopilot.Size = New Size(65, 19)
-	  chkCopilot.TabIndex = 5
-	  chkCopilot.Text = "Copilot"
-	  chkCopilot.UseVisualStyleBackColor = True
+	  chkBoxTurnOffWindowsCopilot.AutoSize = True
+	  chkBoxTurnOffWindowsCopilot.Checked = True
+	  chkBoxTurnOffWindowsCopilot.CheckState = CheckState.Checked
+	  chkBoxTurnOffWindowsCopilot.Location = New Point(5, 5)
+	  chkBoxTurnOffWindowsCopilot.Name = "chkBoxTurnOffWindowsCopilot"
+	  chkBoxTurnOffWindowsCopilot.Size = New Size(165, 19)
+	  chkBoxTurnOffWindowsCopilot.TabIndex = 12
+	  chkBoxTurnOffWindowsCopilot.Text = "Turn Off Windows Copilot"
+	  chkBoxTurnOffWindowsCopilot.UseVisualStyleBackColor = True
 	  ' 
 	  ' TabPage3
 	  ' 
+	  TabPage3.Controls.Add(chkBoxDisableAIDataAnalysis)
 	  TabPage3.Location = New Point(4, 24)
 	  TabPage3.Name = "TabPage3"
 	  TabPage3.Size = New Size(826, 401)
@@ -151,13 +184,25 @@ Partial Class frmAI
 	  TabPage3.Text = "Windows AI"
 	  TabPage3.UseVisualStyleBackColor = True
 	  ' 
+	  ' chkBoxDisableAIDataAnalysis
+	  ' 
+	  chkBoxDisableAIDataAnalysis.AutoSize = True
+	  chkBoxDisableAIDataAnalysis.Checked = True
+	  chkBoxDisableAIDataAnalysis.CheckState = CheckState.Checked
+	  chkBoxDisableAIDataAnalysis.Location = New Point(5, 5)
+	  chkBoxDisableAIDataAnalysis.Name = "chkBoxDisableAIDataAnalysis"
+	  chkBoxDisableAIDataAnalysis.Size = New Size(193, 19)
+	  chkBoxDisableAIDataAnalysis.TabIndex = 13
+	  chkBoxDisableAIDataAnalysis.Text = "Disable AI Data Analysis (Recall)"
+	  chkBoxDisableAIDataAnalysis.UseVisualStyleBackColor = True
+	  ' 
 	  ' frmAI
 	  ' 
 	  AutoScaleDimensions = New SizeF(7F, 15F)
 	  AutoScaleMode = AutoScaleMode.Font
 	  ClientSize = New Size(834, 461)
 	  Controls.Add(tabCOntrolAI)
-	  Controls.Add(btnDisable)
+	  Controls.Add(btnRun)
 	  Name = "frmAI"
 	  Text = "frmAI"
 	  tabCOntrolAI.ResumeLayout(False)
@@ -165,17 +210,25 @@ Partial Class frmAI
 	  TabPage1.PerformLayout()
 	  TabPage2.ResumeLayout(False)
 	  TabPage2.PerformLayout()
+	  TabPage3.ResumeLayout(False)
+	  TabPage3.PerformLayout()
 	  ResumeLayout(False)
    End Sub
 
-   Friend WithEvents btnDisable As Button
+   Friend WithEvents btnRun As Button
    Friend WithEvents tabCOntrolAI As TabControl
    Friend WithEvents TabPage1 As TabPage
    Friend WithEvents TabPage2 As TabPage
    Friend WithEvents chkBoxBingSearchEnabled As CheckBox
-   Friend WithEvents chkCopilot As CheckBox
    Friend WithEvents TabPage3 As TabPage
    Friend WithEvents chkBoxAllowSearchToUseLocation As CheckBox
    Friend WithEvents chkBoxCortanaConsent As CheckBox
    Friend WithEvents chkBoxNoUseStoreOpenWith As CheckBox
+   Friend WithEvents CheckBox1 As CheckBox
+   Friend WithEvents CheckBox2 As CheckBox
+   Friend WithEvents CheckBox3 As CheckBox
+   Friend WithEvents chkBoxTurnOffWindowsCopilot As CheckBox
+   Friend WithEvents chkBoxDisableSearchBoxSuggestions As CheckBox
+   Friend WithEvents chkBoxShowCopilotButton As CheckBox
+   Friend WithEvents chkBoxDisableAIDataAnalysis As CheckBox
 End Class

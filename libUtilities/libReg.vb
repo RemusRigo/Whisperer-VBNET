@@ -1,6 +1,6 @@
 ﻿Imports Microsoft.Win32
 
-Module libReg
+Public Module libReg
 
    Public Function RegValueExists(root As RegistryKey, path As String, valueName As String) As Boolean
 	  Using key As RegistryKey = root.OpenSubKey(path, writable:=False)

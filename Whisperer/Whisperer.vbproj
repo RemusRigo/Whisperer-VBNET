@@ -27,8 +27,10 @@
    </ItemGroup>
 
    <ItemGroup>
-      <ProjectReference Include="..\libWindows\libWindows.vbproj" />
+      <ProjectReference Include="..\libUtilities\libUtilities.vbproj" />
+      <ProjectReference Include="..\libSW\libSW.vbproj" />
       <ProjectReference Include="..\libVM\libVM.vbproj" />
+      <ProjectReference Include="..\libWindows\libWindows.vbproj" />
    </ItemGroup>
 
    <ItemGroup>

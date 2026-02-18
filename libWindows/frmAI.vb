@@ -7,9 +7,17 @@ Public Class frmAI
 	  End If
    End Sub
 
-   Private Sub btnDisable_Click(sender As Object, e As EventArgs) Handles btnDisable.Click
+   Private Sub btnRun_Click(sender As Object, e As EventArgs) Handles btnRun.Click
 
 	  ' Current User
+	  If chkBoxShowCopilotButton.Checked Then
+		 RegWriteDWord(Registry.CurrentUser, "Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced", "ShowCopilotButton", 0)
+	  End If
+
+	  If chkBoxAllowSearchToUseLocation.Checked Then
+		 RegWriteDWord(Registry.CurrentUser, "Software\Microsoft\Windows\CurrentVersion\Search", "AllowSearchToUseLocation", 0)
+	  End If
+
 	  If chkBoxBingSearchEnabled.Checked Then
 		 RegWriteDWord(Registry.CurrentUser, "Software\Microsoft\Windows\CurrentVersion\Search", "BingSearchEnabled", 0)
 	  End If
@@ -18,8 +26,16 @@ Public Class frmAI
 		 RegWriteDWord(Registry.CurrentUser, "Software\Microsoft\Windows\CurrentVersion\Search", "CortanaConsent", 0)
 	  End If
 
-	  If chkBoxAllowSearchToUseLocation.Checked Then
-		 RegWriteDWord(Registry.CurrentUser, "Software\Microsoft\Windows\CurrentVersion\Search", "AllowSearchToUseLocation", 0)
+	  If chkBoxDisableSearchBoxSuggestions.Checked Then
+		 RegWriteDWord(Registry.CurrentUser, "Software\Policies\Microsoft\Windows\Explorer", "DisableSearchBoxSuggestions", 1)
+	  End If
+
+	  If chkBoxDisableAIDataAnalysis.Checked Then
+		 RegWriteDWord(Registry.CurrentUser, "Software\Policies\Microsoft\Windows\WindowsAI", "DisableAIDataAnalysis", 1)
+	  End If
+
+	  If chkBoxTurnOffWindowsCopilot.Checked Then
+		 RegWriteDWord(Registry.CurrentUser, "Software\Policies\Microsoft\Windows\WindowsCopilot", "TurnOffWindowsCopilot", 1)
 	  End If
 
 	  ' Local Machine

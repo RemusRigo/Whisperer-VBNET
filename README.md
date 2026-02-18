@@ -18,6 +18,8 @@ You must install .NET Runtime 9 x64 and then just run Whisperer.exe
 
 ## Roadmap
 
+2026-02-18: Add: Microsoft Edge: remove AI features
+
 2026-02-18: Add: check if app running with elevated privileges (run as admin)
 
 2026-02-18: Add: status bar to show messages

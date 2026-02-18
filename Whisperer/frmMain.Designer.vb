@@ -35,7 +35,8 @@ Partial Class frmMain
 	  Dim TreeNode10 As TreeNode = New TreeNode("Microsoft Windows", New TreeNode() {TreeNode1, TreeNode2, TreeNode3, TreeNode4, TreeNode5, TreeNode7, TreeNode8, TreeNode9})
 	  Dim TreeNode11 As TreeNode = New TreeNode("Google Chrome")
 	  Dim TreeNode12 As TreeNode = New TreeNode("Mozilla Firefox")
-	  Dim TreeNode13 As TreeNode = New TreeNode("Opera")
+	  Dim TreeNode13 As TreeNode = New TreeNode("Microsoft Edge")
+	  Dim TreeNode14 As TreeNode = New TreeNode("Opera")
 	  Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
 	  scMain = New SplitContainer()
 	  tvItems = New TreeView()
@@ -98,9 +99,11 @@ Partial Class frmMain
 	  TreeNode11.Text = "Google Chrome"
 	  TreeNode12.Name = "Node6"
 	  TreeNode12.Text = "Mozilla Firefox"
-	  TreeNode13.Name = "Node5"
-	  TreeNode13.Text = "Opera"
-	  tvItems.Nodes.AddRange(New TreeNode() {TreeNode10, TreeNode11, TreeNode12, TreeNode13})
+	  TreeNode13.Name = "Node12"
+	  TreeNode13.Text = "Microsoft Edge"
+	  TreeNode14.Name = "Node5"
+	  TreeNode14.Text = "Opera"
+	  tvItems.Nodes.AddRange(New TreeNode() {TreeNode10, TreeNode11, TreeNode12, TreeNode13, TreeNode14})
 	  tvItems.SelectedImageIndex = 0
 	  tvItems.Size = New Size(273, 494)
 	  tvItems.TabIndex = 0
