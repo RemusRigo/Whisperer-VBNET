@@ -1,8 +1,6 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports Microsoft.Win32
 
-Imports libReg
-
 Public Class frmTaskBar
 
    Private isInitialized As Boolean = False

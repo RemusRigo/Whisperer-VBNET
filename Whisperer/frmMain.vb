@@ -1,6 +1,8 @@
-﻿Imports System.Windows
+﻿Imports System.Runtime
+Imports System.Windows
 Imports System.Windows.Forms.Design.AxImporter
-Imports libWindows, libVM
+Imports libVM
+Imports libWindows
 
 Public Class frmMain
    Public Sub ProcessOptions(frm As String)
@@ -10,6 +12,8 @@ Public Class frmMain
       Select Case frm
          Case "Microsoft Windows\AI"
             frmChild = New frmAI()
+         Case "Microsoft Windows\Regional Settings"
+            frmChild = New frmRegion()
          Case "Microsoft Windows\Start Menu"
             frmChild = New frmStartMenu()
          Case "Microsoft Windows\TaskBar"
@@ -32,14 +36,23 @@ Public Class frmMain
 
    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
       tvItems.ExpandAll()
+
       ' resize
       Me.Width = Screen.PrimaryScreen.WorkingArea.Width * 0.75 ' 75%
       Me.Height = Screen.PrimaryScreen.WorkingArea.Height * 0.75
+
       ' recenter
       Me.StartPosition = FormStartPosition.Manual
       Me.Left = (Screen.PrimaryScreen.WorkingArea.Width - Me.Width) / 2
       Me.Top = (Screen.PrimaryScreen.WorkingArea.Height - Me.Height) / 2
-    End Sub
+
+	  ' check admin privileges
+	  If IsRunningAsAdmin() Then
+         StatusStrip.Items(0).Text = "Whisperer is running with Admin privileges"
+      Else
+         StatusStrip.Items(0).Text = "Whisperer is NOT running with Admin privileges"
+      End If
+   End Sub
 
     Private Sub tvItems_DoubleClick(sender As Object, e As EventArgs) Handles tvItems.DoubleClick
         If tvItems.SelectedNode Is Nothing Then

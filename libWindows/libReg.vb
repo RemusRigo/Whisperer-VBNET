@@ -14,14 +14,16 @@ Module libReg
    End Function
 
    Public Function RegReadDWord(root As RegistryKey, path As String, name As String) As Integer
+	  Dim r As Integer = -1
 	  Try
 		 Using key As RegistryKey = root.OpenSubKey(path, False)
 			If key IsNot Nothing Then
-			   Return Convert.ToInt32(key.GetValue(name, Nothing))
+			   r = Convert.ToInt32(key.GetValue(name, Nothing))
 			End If
 		 End Using
 	  Catch ex As Exception
 	  End Try
+	  Return r
    End Function
 
    Public Function RegWriteDWord(root As RegistryKey, path As String, name As String, value As Integer) As Boolean

@@ -18,6 +18,18 @@ You must install .NET Runtime 9 x64 and then just run Whisperer.exe
 
 ## Roadmap
 
+2026-02-18: Add: check if app running with elevated privileges (run as admin)
+
+2026-02-18: Add: status bar to show messages
+
+2026-02-18: Add: Windows AI: remove Allow Search to access Microsoft Store
+
+2026-02-18: Add: Windows AI: remove Allow Search to use location
+
+2026-02-18: Add: Windows AI: Disable Cortana
+
+2026-02-18: Add: Windows AI: Disable Bing Search
+
 2026-01-24: Add: Taskbar: Disable Widgets
 
 2026-01-23: Add: Theme: Light/Dark theme for Apps/System
