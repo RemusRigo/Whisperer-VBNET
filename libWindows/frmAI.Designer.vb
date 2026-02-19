@@ -1,44 +1,40 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmAI
-    Inherits System.Windows.Forms.Form
+   Inherits System.Windows.Forms.Form
 
-    'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-        Try
-            If disposing AndAlso components IsNot Nothing Then
-                components.Dispose()
-            End If
-        Finally
-            MyBase.Dispose(disposing)
-        End Try
-    End Sub
+   'Form overrides dispose to clean up the component list.
+   <System.Diagnostics.DebuggerNonUserCode()>
+   Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+	  Try
+		 If disposing AndAlso components IsNot Nothing Then
+			components.Dispose()
+		 End If
+	  Finally
+		 MyBase.Dispose(disposing)
+	  End Try
+   End Sub
 
-    'Required by the Windows Form Designer
-    Private components As System.ComponentModel.IContainer
+   'Required by the Windows Form Designer
+   Private components As System.ComponentModel.IContainer
 
    'NOTE: The following procedure is required by the Windows Form Designer
    'It can be modified using the Windows Form Designer.  
    'Do not modify it using the code editor.
-   <System.Diagnostics.DebuggerStepThrough()> _
+   <System.Diagnostics.DebuggerStepThrough()>
    Private Sub InitializeComponent()
 	  btnRun = New Button()
-	  tabCOntrolAI = New TabControl()
-	  TabPage1 = New TabPage()
-	  chkBoxShowCopilotButton = New CheckBox()
-	  chkBoxDisableSearchBoxSuggestions = New CheckBox()
-	  chkBoxNoUseStoreOpenWith = New CheckBox()
-	  chkBoxAllowSearchToUseLocation = New CheckBox()
-	  chkBoxCortanaConsent = New CheckBox()
-	  chkBoxBingSearchEnabled = New CheckBox()
-	  TabPage2 = New TabPage()
-	  chkBoxTurnOffWindowsCopilot = New CheckBox()
-	  TabPage3 = New TabPage()
-	  chkBoxDisableAIDataAnalysis = New CheckBox()
-	  tabCOntrolAI.SuspendLayout()
-	  TabPage1.SuspendLayout()
-	  TabPage2.SuspendLayout()
-	  TabPage3.SuspendLayout()
+	  chkBoxDisableBingSearch = New CheckBox()
+	  chkBoxDisableSearchLocation = New CheckBox()
+	  chkBoxDisableSearchStore = New CheckBox()
+	  chkBoxDisableCortana = New CheckBox()
+	  chkBoxDisableRecall = New CheckBox()
+	  chkBoxDisableSearchSuggestions = New CheckBox()
+	  grpBoxApps = New GroupBox()
+	  chkBoxPaint = New CheckBox()
+	  chkBoxNotepad = New CheckBox()
+	  chkBoxDisableCopilot = New CheckBox()
+	  chkBoxEdge = New CheckBox()
+	  grpBoxApps.SuspendLayout()
 	  SuspendLayout()
 	  ' 
 	  ' btnRun
@@ -51,184 +47,170 @@ Partial Class frmAI
 	  btnRun.Text = "Run"
 	  btnRun.UseVisualStyleBackColor = True
 	  ' 
-	  ' tabCOntrolAI
+	  ' chkBoxDisableBingSearch
 	  ' 
-	  tabCOntrolAI.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-	  tabCOntrolAI.Controls.Add(TabPage1)
-	  tabCOntrolAI.Controls.Add(TabPage2)
-	  tabCOntrolAI.Controls.Add(TabPage3)
-	  tabCOntrolAI.Location = New Point(0, 0)
-	  tabCOntrolAI.Name = "tabCOntrolAI"
-	  tabCOntrolAI.SelectedIndex = 0
-	  tabCOntrolAI.Size = New Size(834, 429)
-	  tabCOntrolAI.TabIndex = 3
+	  chkBoxDisableBingSearch.AutoSize = True
+	  chkBoxDisableBingSearch.Checked = True
+	  chkBoxDisableBingSearch.CheckState = CheckState.Checked
+	  chkBoxDisableBingSearch.Location = New Point(5, 5)
+	  chkBoxDisableBingSearch.Name = "chkBoxDisableBingSearch"
+	  chkBoxDisableBingSearch.Size = New Size(158, 19)
+	  chkBoxDisableBingSearch.TabIndex = 2
+	  chkBoxDisableBingSearch.Text = "Disable Bing/Web Search"
+	  chkBoxDisableBingSearch.UseVisualStyleBackColor = True
 	  ' 
-	  ' TabPage1
+	  ' chkBoxDisableSearchLocation
 	  ' 
-	  TabPage1.Controls.Add(chkBoxShowCopilotButton)
-	  TabPage1.Controls.Add(chkBoxDisableSearchBoxSuggestions)
-	  TabPage1.Controls.Add(chkBoxNoUseStoreOpenWith)
-	  TabPage1.Controls.Add(chkBoxAllowSearchToUseLocation)
-	  TabPage1.Controls.Add(chkBoxCortanaConsent)
-	  TabPage1.Controls.Add(chkBoxBingSearchEnabled)
-	  TabPage1.Location = New Point(4, 24)
-	  TabPage1.Name = "TabPage1"
-	  TabPage1.Padding = New Padding(3)
-	  TabPage1.Size = New Size(826, 401)
-	  TabPage1.TabIndex = 0
-	  TabPage1.Text = "Search"
-	  TabPage1.UseVisualStyleBackColor = True
+	  chkBoxDisableSearchLocation.AutoSize = True
+	  chkBoxDisableSearchLocation.Checked = True
+	  chkBoxDisableSearchLocation.CheckState = CheckState.Checked
+	  chkBoxDisableSearchLocation.Location = New Point(5, 45)
+	  chkBoxDisableSearchLocation.Name = "chkBoxDisableSearchLocation"
+	  chkBoxDisableSearchLocation.Size = New Size(188, 19)
+	  chkBoxDisableSearchLocation.TabIndex = 3
+	  chkBoxDisableSearchLocation.Text = "Disable Search access Location"
+	  chkBoxDisableSearchLocation.UseVisualStyleBackColor = True
 	  ' 
-	  ' chkBoxShowCopilotButton
+	  ' chkBoxDisableSearchStore
 	  ' 
-	  chkBoxShowCopilotButton.AutoSize = True
-	  chkBoxShowCopilotButton.Checked = True
-	  chkBoxShowCopilotButton.CheckState = CheckState.Checked
-	  chkBoxShowCopilotButton.Location = New Point(5, 105)
-	  chkBoxShowCopilotButton.Name = "chkBoxShowCopilotButton"
-	  chkBoxShowCopilotButton.Size = New Size(136, 19)
-	  chkBoxShowCopilotButton.TabIndex = 12
-	  chkBoxShowCopilotButton.Text = "Show Copilot Button"
-	  chkBoxShowCopilotButton.UseVisualStyleBackColor = True
+	  chkBoxDisableSearchStore.AutoSize = True
+	  chkBoxDisableSearchStore.Checked = True
+	  chkBoxDisableSearchStore.CheckState = CheckState.Checked
+	  chkBoxDisableSearchStore.Location = New Point(5, 65)
+	  chkBoxDisableSearchStore.Name = "chkBoxDisableSearchStore"
+	  chkBoxDisableSearchStore.Size = New Size(169, 19)
+	  chkBoxDisableSearchStore.TabIndex = 4
+	  chkBoxDisableSearchStore.Text = "Disable Search access Store"
+	  chkBoxDisableSearchStore.UseVisualStyleBackColor = True
 	  ' 
-	  ' chkBoxDisableSearchBoxSuggestions
+	  ' chkBoxDisableCortana
 	  ' 
-	  chkBoxDisableSearchBoxSuggestions.AutoSize = True
-	  chkBoxDisableSearchBoxSuggestions.Checked = True
-	  chkBoxDisableSearchBoxSuggestions.CheckState = CheckState.Checked
-	  chkBoxDisableSearchBoxSuggestions.Location = New Point(5, 85)
-	  chkBoxDisableSearchBoxSuggestions.Name = "chkBoxDisableSearchBoxSuggestions"
-	  chkBoxDisableSearchBoxSuggestions.Size = New Size(191, 19)
-	  chkBoxDisableSearchBoxSuggestions.TabIndex = 11
-	  chkBoxDisableSearchBoxSuggestions.Text = "Disable Search Box Suggestions"
-	  chkBoxDisableSearchBoxSuggestions.UseVisualStyleBackColor = True
+	  chkBoxDisableCortana.AutoSize = True
+	  chkBoxDisableCortana.Checked = True
+	  chkBoxDisableCortana.CheckState = CheckState.Checked
+	  chkBoxDisableCortana.Location = New Point(5, 85)
+	  chkBoxDisableCortana.Name = "chkBoxDisableCortana"
+	  chkBoxDisableCortana.Size = New Size(109, 19)
+	  chkBoxDisableCortana.TabIndex = 6
+	  chkBoxDisableCortana.Text = "Disable Cortana"
+	  chkBoxDisableCortana.UseVisualStyleBackColor = True
 	  ' 
-	  ' chkBoxNoUseStoreOpenWith
+	  ' chkBoxDisableRecall
 	  ' 
-	  chkBoxNoUseStoreOpenWith.AutoSize = True
-	  chkBoxNoUseStoreOpenWith.Checked = True
-	  chkBoxNoUseStoreOpenWith.CheckState = CheckState.Checked
-	  chkBoxNoUseStoreOpenWith.Location = New Point(5, 65)
-	  chkBoxNoUseStoreOpenWith.Name = "chkBoxNoUseStoreOpenWith"
-	  chkBoxNoUseStoreOpenWith.Size = New Size(146, 19)
-	  chkBoxNoUseStoreOpenWith.TabIndex = 10
-	  chkBoxNoUseStoreOpenWith.Text = "Access Microsoft Store"
-	  chkBoxNoUseStoreOpenWith.UseVisualStyleBackColor = True
+	  chkBoxDisableRecall.AutoSize = True
+	  chkBoxDisableRecall.Checked = True
+	  chkBoxDisableRecall.CheckState = CheckState.Checked
+	  chkBoxDisableRecall.Location = New Point(5, 125)
+	  chkBoxDisableRecall.Name = "chkBoxDisableRecall"
+	  chkBoxDisableRecall.Size = New Size(98, 19)
+	  chkBoxDisableRecall.TabIndex = 7
+	  chkBoxDisableRecall.Text = "Disable Recall"
+	  chkBoxDisableRecall.UseVisualStyleBackColor = True
 	  ' 
-	  ' chkBoxAllowSearchToUseLocation
+	  ' chkBoxDisableSearchSuggestions
 	  ' 
-	  chkBoxAllowSearchToUseLocation.AutoSize = True
-	  chkBoxAllowSearchToUseLocation.Checked = True
-	  chkBoxAllowSearchToUseLocation.CheckState = CheckState.Checked
-	  chkBoxAllowSearchToUseLocation.Location = New Point(5, 45)
-	  chkBoxAllowSearchToUseLocation.Name = "chkBoxAllowSearchToUseLocation"
-	  chkBoxAllowSearchToUseLocation.Size = New Size(91, 19)
-	  chkBoxAllowSearchToUseLocation.TabIndex = 9
-	  chkBoxAllowSearchToUseLocation.Text = "Use location"
-	  chkBoxAllowSearchToUseLocation.UseVisualStyleBackColor = True
+	  chkBoxDisableSearchSuggestions.AutoSize = True
+	  chkBoxDisableSearchSuggestions.Checked = True
+	  chkBoxDisableSearchSuggestions.CheckState = CheckState.Checked
+	  chkBoxDisableSearchSuggestions.Location = New Point(5, 25)
+	  chkBoxDisableSearchSuggestions.Name = "chkBoxDisableSearchSuggestions"
+	  chkBoxDisableSearchSuggestions.Size = New Size(169, 19)
+	  chkBoxDisableSearchSuggestions.TabIndex = 8
+	  chkBoxDisableSearchSuggestions.Text = "Disable Search Suggestions"
+	  chkBoxDisableSearchSuggestions.UseVisualStyleBackColor = True
 	  ' 
-	  ' chkBoxCortanaConsent
+	  ' grpBoxApps
 	  ' 
-	  chkBoxCortanaConsent.AutoSize = True
-	  chkBoxCortanaConsent.Checked = True
-	  chkBoxCortanaConsent.CheckState = CheckState.Checked
-	  chkBoxCortanaConsent.Location = New Point(5, 25)
-	  chkBoxCortanaConsent.Name = "chkBoxCortanaConsent"
-	  chkBoxCortanaConsent.Size = New Size(115, 19)
-	  chkBoxCortanaConsent.TabIndex = 8
-	  chkBoxCortanaConsent.Text = "Cortana Consent"
-	  chkBoxCortanaConsent.UseVisualStyleBackColor = True
+	  grpBoxApps.Controls.Add(chkBoxEdge)
+	  grpBoxApps.Controls.Add(chkBoxPaint)
+	  grpBoxApps.Controls.Add(chkBoxNotepad)
+	  grpBoxApps.Location = New Point(225, 5)
+	  grpBoxApps.Name = "grpBoxApps"
+	  grpBoxApps.Size = New Size(379, 195)
+	  grpBoxApps.TabIndex = 9
+	  grpBoxApps.TabStop = False
+	  grpBoxApps.Text = "Remove AI features from:"
 	  ' 
-	  ' chkBoxBingSearchEnabled
+	  ' chkBoxPaint
 	  ' 
-	  chkBoxBingSearchEnabled.AutoSize = True
-	  chkBoxBingSearchEnabled.Checked = True
-	  chkBoxBingSearchEnabled.CheckState = CheckState.Checked
-	  chkBoxBingSearchEnabled.Location = New Point(5, 5)
-	  chkBoxBingSearchEnabled.Name = "chkBoxBingSearchEnabled"
-	  chkBoxBingSearchEnabled.Size = New Size(88, 19)
-	  chkBoxBingSearchEnabled.TabIndex = 7
-	  chkBoxBingSearchEnabled.Text = "Bing Search"
-	  chkBoxBingSearchEnabled.UseVisualStyleBackColor = True
+	  chkBoxPaint.AutoSize = True
+	  chkBoxPaint.Checked = True
+	  chkBoxPaint.CheckState = CheckState.Checked
+	  chkBoxPaint.Location = New Point(5, 40)
+	  chkBoxPaint.Name = "chkBoxPaint"
+	  chkBoxPaint.Size = New Size(53, 19)
+	  chkBoxPaint.TabIndex = 12
+	  chkBoxPaint.Text = "Paint"
+	  chkBoxPaint.UseVisualStyleBackColor = True
 	  ' 
-	  ' TabPage2
+	  ' chkBoxNotepad
 	  ' 
-	  TabPage2.Controls.Add(chkBoxTurnOffWindowsCopilot)
-	  TabPage2.Location = New Point(4, 24)
-	  TabPage2.Name = "TabPage2"
-	  TabPage2.Padding = New Padding(3)
-	  TabPage2.Size = New Size(826, 401)
-	  TabPage2.TabIndex = 1
-	  TabPage2.Text = "Copilot"
-	  TabPage2.UseVisualStyleBackColor = True
+	  chkBoxNotepad.AutoSize = True
+	  chkBoxNotepad.Checked = True
+	  chkBoxNotepad.CheckState = CheckState.Checked
+	  chkBoxNotepad.Location = New Point(5, 20)
+	  chkBoxNotepad.Name = "chkBoxNotepad"
+	  chkBoxNotepad.Size = New Size(72, 19)
+	  chkBoxNotepad.TabIndex = 11
+	  chkBoxNotepad.Text = "Notepad"
+	  chkBoxNotepad.UseVisualStyleBackColor = True
 	  ' 
-	  ' chkBoxTurnOffWindowsCopilot
+	  ' chkBoxDisableCopilot
 	  ' 
-	  chkBoxTurnOffWindowsCopilot.AutoSize = True
-	  chkBoxTurnOffWindowsCopilot.Checked = True
-	  chkBoxTurnOffWindowsCopilot.CheckState = CheckState.Checked
-	  chkBoxTurnOffWindowsCopilot.Location = New Point(5, 5)
-	  chkBoxTurnOffWindowsCopilot.Name = "chkBoxTurnOffWindowsCopilot"
-	  chkBoxTurnOffWindowsCopilot.Size = New Size(165, 19)
-	  chkBoxTurnOffWindowsCopilot.TabIndex = 12
-	  chkBoxTurnOffWindowsCopilot.Text = "Turn Off Windows Copilot"
-	  chkBoxTurnOffWindowsCopilot.UseVisualStyleBackColor = True
+	  chkBoxDisableCopilot.AutoSize = True
+	  chkBoxDisableCopilot.Checked = True
+	  chkBoxDisableCopilot.CheckState = CheckState.Checked
+	  chkBoxDisableCopilot.Location = New Point(5, 105)
+	  chkBoxDisableCopilot.Name = "chkBoxDisableCopilot"
+	  chkBoxDisableCopilot.Size = New Size(106, 19)
+	  chkBoxDisableCopilot.TabIndex = 6
+	  chkBoxDisableCopilot.Text = "Disable Copilot"
+	  chkBoxDisableCopilot.UseVisualStyleBackColor = True
 	  ' 
-	  ' TabPage3
+	  ' chkBoxEdge
 	  ' 
-	  TabPage3.Controls.Add(chkBoxDisableAIDataAnalysis)
-	  TabPage3.Location = New Point(4, 24)
-	  TabPage3.Name = "TabPage3"
-	  TabPage3.Size = New Size(826, 401)
-	  TabPage3.TabIndex = 2
-	  TabPage3.Text = "Windows AI"
-	  TabPage3.UseVisualStyleBackColor = True
-	  ' 
-	  ' chkBoxDisableAIDataAnalysis
-	  ' 
-	  chkBoxDisableAIDataAnalysis.AutoSize = True
-	  chkBoxDisableAIDataAnalysis.Checked = True
-	  chkBoxDisableAIDataAnalysis.CheckState = CheckState.Checked
-	  chkBoxDisableAIDataAnalysis.Location = New Point(5, 5)
-	  chkBoxDisableAIDataAnalysis.Name = "chkBoxDisableAIDataAnalysis"
-	  chkBoxDisableAIDataAnalysis.Size = New Size(193, 19)
-	  chkBoxDisableAIDataAnalysis.TabIndex = 13
-	  chkBoxDisableAIDataAnalysis.Text = "Disable AI Data Analysis (Recall)"
-	  chkBoxDisableAIDataAnalysis.UseVisualStyleBackColor = True
+	  chkBoxEdge.AutoSize = True
+	  chkBoxEdge.Checked = True
+	  chkBoxEdge.CheckState = CheckState.Checked
+	  chkBoxEdge.Location = New Point(5, 60)
+	  chkBoxEdge.Name = "chkBoxEdge"
+	  chkBoxEdge.Size = New Size(52, 19)
+	  chkBoxEdge.TabIndex = 13
+	  chkBoxEdge.Text = "Edge"
+	  chkBoxEdge.UseVisualStyleBackColor = True
 	  ' 
 	  ' frmAI
 	  ' 
 	  AutoScaleDimensions = New SizeF(7F, 15F)
 	  AutoScaleMode = AutoScaleMode.Font
 	  ClientSize = New Size(834, 461)
-	  Controls.Add(tabCOntrolAI)
+	  Controls.Add(chkBoxDisableCopilot)
+	  Controls.Add(grpBoxApps)
+	  Controls.Add(chkBoxDisableSearchSuggestions)
+	  Controls.Add(chkBoxDisableRecall)
+	  Controls.Add(chkBoxDisableCortana)
+	  Controls.Add(chkBoxDisableSearchStore)
+	  Controls.Add(chkBoxDisableSearchLocation)
+	  Controls.Add(chkBoxDisableBingSearch)
 	  Controls.Add(btnRun)
 	  Name = "frmAI"
-	  Text = "frmAI"
-	  tabCOntrolAI.ResumeLayout(False)
-	  TabPage1.ResumeLayout(False)
-	  TabPage1.PerformLayout()
-	  TabPage2.ResumeLayout(False)
-	  TabPage2.PerformLayout()
-	  TabPage3.ResumeLayout(False)
-	  TabPage3.PerformLayout()
+	  Text = "A.I."
+	  grpBoxApps.ResumeLayout(False)
+	  grpBoxApps.PerformLayout()
 	  ResumeLayout(False)
+	  PerformLayout()
    End Sub
 
    Friend WithEvents btnRun As Button
-   Friend WithEvents tabCOntrolAI As TabControl
-   Friend WithEvents TabPage1 As TabPage
-   Friend WithEvents TabPage2 As TabPage
-   Friend WithEvents chkBoxBingSearchEnabled As CheckBox
-   Friend WithEvents TabPage3 As TabPage
-   Friend WithEvents chkBoxAllowSearchToUseLocation As CheckBox
-   Friend WithEvents chkBoxCortanaConsent As CheckBox
-   Friend WithEvents chkBoxNoUseStoreOpenWith As CheckBox
-   Friend WithEvents CheckBox1 As CheckBox
-   Friend WithEvents CheckBox2 As CheckBox
-   Friend WithEvents CheckBox3 As CheckBox
-   Friend WithEvents chkBoxTurnOffWindowsCopilot As CheckBox
-   Friend WithEvents chkBoxDisableSearchBoxSuggestions As CheckBox
-   Friend WithEvents chkBoxShowCopilotButton As CheckBox
-   Friend WithEvents chkBoxDisableAIDataAnalysis As CheckBox
+   Friend WithEvents chkBoxDisableBingSearch As CheckBox
+   Friend WithEvents chkBoxDisableSearchLocation As CheckBox
+   Friend WithEvents chkBoxDisableSearchStore As CheckBox
+   Friend WithEvents chkBoxDisableCortana As CheckBox
+   Friend WithEvents chkBoxDisableRecall As CheckBox
+   Friend WithEvents chkBoxDisableSearchSuggestions As CheckBox
+   Friend WithEvents grpBoxApps As GroupBox
+   Friend WithEvents chkBoxDisableCopilot As CheckBox
+   Friend WithEvents chkBoxNotepad As CheckBox
+   Friend WithEvents chkBoxPaint As CheckBox
+   Friend WithEvents chkBoxEdge As CheckBox
 End Class
